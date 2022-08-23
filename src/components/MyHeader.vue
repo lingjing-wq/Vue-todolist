@@ -9,6 +9,10 @@ import { nanoid } from 'nanoid'
 export default {
     name: 'MyHeader',
     //接收从APP内传来的函数receive
+<<<<<<< HEAD
+=======
+    props:['receive'],
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
     methods: {
         add(event) {
             // console.log(event.target.value)
@@ -16,7 +20,11 @@ export default {
             //将用户的输入包包装成一个todo对象
             const todoObj = { id: nanoid(), title: event.target.value, done: false }
             // console.log(todoObj)
+<<<<<<< HEAD
             this.$emit('receive',todoObj);//将需要添加的数据传给App
+=======
+            this.receive(todoObj);//将需要添加的数据传给App
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
             //添加完后将值置为空
             event.target.value=''
         }

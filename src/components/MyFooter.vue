@@ -13,7 +13,11 @@
 <script>
 export default {
     name: 'MyFooter',
+<<<<<<< HEAD
     props:['todos'],
+=======
+    props:['todos','checkAllTodo','clearAllTodo'],
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
     computed:{
         doneTotal(){
             //计已完成的个数
@@ -28,12 +32,19 @@ export default {
     methods:{
         checkAll(e){
             // console.log(e.target.checked)
+<<<<<<< HEAD
             // this.checkAllTodo(e.target.checked);
             this.$emit('checkAllTodo',e.target.checked);
         },
         clearAll(){
             // this.clearAllTodo();
             this.$emit('clearAllTodo');
+=======
+            this.checkAllTodo(e.target.checked);
+        },
+        clearAll(){
+            this.clearAllTodo();
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
         }
     },
 

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <transition name="todo" appear>
         <li>
         <label>
@@ -10,17 +11,31 @@
         <button class="btn btn-edit" @click="handleEdit(todo)">编辑</button>
     </li>
     </transition>
+=======
+    <li>
+        <label>
+            <input type="checkbox" :checked="todo.done" @click="handleCheck(todo.id)" />
+            <span>{{ todo.title }}</span>
+        </label>
+        <button class="btn btn-danger" @click="handledelete(todo.id)">删除</button>
+    </li>
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
 </template>
 
 <script>
 export default {
     name: 'MyItem',
     //声明接受todo对象
+<<<<<<< HEAD
     props: ['todo'],//接收从MyList组件中传来的数据
+=======
+    props: ['todo', 'checkTodo','deleteTodo'],//接收从MyList组件中传来的数据
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
     methods: {
         handleCheck(id) {
             // console.log(id)
             //通知APP组件将对应的todo对象的done值取反
+<<<<<<< HEAD
             // this.checkTodo(id)
             this.$bus.$emit('checkTodo', id);
         },
@@ -51,6 +66,19 @@ export default {
         }
     },
 }       
+=======
+            this.checkTodo(id)
+        },
+        //删除
+        handledelete(id) {
+            if(confirm('确定删除吗？')){
+                // console.log(id);
+                this.deleteTodo(id);
+            }
+        }
+    },
+}
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
 </script>
 
 <style scoped>

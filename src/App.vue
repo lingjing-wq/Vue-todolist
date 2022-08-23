@@ -3,11 +3,19 @@
     <div class="todo-container">
       <div class="todo-wrap">
 
+<<<<<<< HEAD
         <MyHeader @receive="receive" />
 
         <MyList :todos="todos"/>
 
         <MyFooter :todos="todos" @checkAllTodo='checkAllTodo' @clearAllTodo='clearAllTodo' />
+=======
+        <MyHeader :receive="receive" />
+
+        <MyList :todos="todos" :checkTodo="checkTodo" :deleteTodo="deleteTodo" />
+
+        <MyFooter :todos="todos" :checkAllTodo='checkAllTodo' :clearAllTodo='clearAllTodo' />
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
       </div>
     </div>
   </div>
@@ -28,12 +36,20 @@ export default {
   },
   data() {
     return {
+<<<<<<< HEAD
       // todos: [
       //   { id: '001', title: '吃饭', done: true },
       //   { id: '002', title: '睡觉', done: false },
       //   { id: '003', title: '做事', done: true },
       // ]
       todos: JSON.parse(localStorage.getItem('todos')) || []
+=======
+      todos: [
+        { id: '001', title: '吃饭', done: true },
+        { id: '002', title: '睡觉', done: false },
+        { id: '003', title: '做事', done: true },
+      ]
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
     }
   },
   methods: {
@@ -67,6 +83,7 @@ export default {
       this.todos = this.todos.filter((todo) => {
         return !todo.done
       })
+<<<<<<< HEAD
     },
     //勾选or取消勾选
     updateTodo(id,title) {
@@ -96,6 +113,10 @@ export default {
     this.$bus.$off('updateTodo');
   },
 
+=======
+    }
+  },
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
 }
 </script>
 
@@ -155,5 +176,8 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
 </style>

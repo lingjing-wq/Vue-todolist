@@ -1,6 +1,10 @@
 <template>
     <ul class="todo-main">
+<<<<<<< HEAD
         <MyItem v-for="todoObj in todos" :key="todoObj.id" :todo="todoObj"/>
+=======
+        <MyItem v-for="todoObj in todos" :key="todoObj.id" :todo="todoObj" :checkTodo="checkTodo" :deleteTodo="deleteTodo"/>
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
     </ul>
 </template>
 
@@ -13,7 +17,11 @@ export default {
         MyItem
     },
     //接收从App组件中来的数据
+<<<<<<< HEAD
     props:['todos']
+=======
+    props:['todos','checkTodo','deleteTodo']
+>>>>>>> aa4a0d066879ee6bde17074b017cef8f53045ae5
 }
 </script>
 
